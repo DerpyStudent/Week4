@@ -1,6 +1,8 @@
 float[] values;
 int index;
 int cout=0;
+int ayylmao = 500;
+
 
 void setup() {
   size(600, 250);
@@ -31,8 +33,18 @@ void draw() {
 
   for (int i = 0; i < values.length; ++i) {
     int realIndex = index + i;
+    /*if (realIndex > ayylmao) {
+      ayylmao = realIndex;
+      println(ayylmao);
+      highest value of realIndex = 398 */
+      
     if (realIndex >= values.length) {
       realIndex -= values.length;
+      /*if (realIndex < ayylmao) {
+      ayylmao = realIndex;
+      println(ayylmao);
+      Lowest Value of realIndex = 0
+    } */
     }
     line(i*3, height-values[realIndex], i*3, height);
     /*if (index==0) {
@@ -41,15 +53,8 @@ void draw() {
      println(cout);
      Using a stopwatch and println(), I determined that the value of index resets 
      twice in 10 seconds
-    /*
-    /*
-     println(realIndex -= values.length);
-     The lowest observed value for realIndex == -200 or 0?
-     */
-    /*
-    println(index + i);
-     The highest value of realIndex == 399 or 199?
-     */
-    //println(realIndex);
+    */
+   
+   
   }
 }
